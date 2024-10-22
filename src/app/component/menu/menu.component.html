@@ -1,0 +1,42 @@
+<div class="container-fluid menu-sticky">
+  <div class="row menu">
+    <div class="col-lg-3 offset-lg-1 menu-left">
+      <ul>
+        <li><a href="#accueilID" [ngClass]="{'active': activeSection === 'accueilID'}" (click)="setActive('accueilID')">Accueil</a></li>
+        <li><a href="#profilID" [ngClass]="{'active': activeSection === 'profilID'}" (click)="setActive('profilID')">Profil</a></li>
+        <li><a href="#parcoursID" [ngClass]="{'active': activeSection === 'parcoursID'}" (click)="setActive('parcoursID')">Parcours</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4 profil">
+      <div class="profile-picture" [ngClass]="{'hidden': isSticky, 'visible': !isSticky}">
+        <img src="assets/image/profil.png" alt="Profile Picture" id="profileImage">
+      </div>
+      <div id="profileInfo" [ngClass]="{'hidden': !isSticky, 'visible': isSticky}">
+        <div class="name">Rado Mahenina</div>
+        <div class="function">|Développeur|</div>
+      </div>
+    </div>
+    <div class="col-lg-3 menu-right">
+      <ul>
+        <li><a href="#competenceID" [ngClass]="{'active': activeSection === 'competenceID'}" (click)="setActive('competenceID')">Compétence</a></li>
+        <li><a href="#projetID" [ngClass]="{'active': activeSection === 'projetID'}" (click)="setActive('projetID')">Projet</a></li>
+        <li><a href="#contactID" [ngClass]="{'active': activeSection === 'contactID'}" (click)="setActive('contactID')">Contact</a></li>
+      </ul>
+    </div>
+    <div id="nomCacher"><h4>Rado Mahenina </h4></div>
+    <div id="menuCacher" (click)="toggleDropdown()">
+      <h2>Menu <i class="fas fa-list"></i></h2>
+    </div>
+    <div *ngIf="isDropdownVisible" class="dropdown-menu">
+      <ul>
+        <li><a href="#accueilID" [ngClass]="{'active': activeSection === 'accueilID'}" (click)="setActive('accueilID')">Accueil</a></li>
+        <li><a href="#profilID" [ngClass]="{'active': activeSection === 'profilID'}" (click)="setActive('profilID')">Profil</a></li>
+        <li><a href="#parcoursID" [ngClass]="{'active': activeSection === 'parcoursID'}" (click)="setActive('parcoursID')">Parcours</a></li>
+        <li><a href="#competenceID" [ngClass]="{'active': activeSection === 'competenceID'}" (click)="setActive('competenceID')">Compétence</a></li>
+        <li><a href="#projetID" [ngClass]="{'active': activeSection === 'projetID'}" (click)="setActive('projetID')">Projet</a></li>
+        <li><a href="#contactID" [ngClass]="{'active': activeSection === 'contactID'}" (click)="setActive('contactID')">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

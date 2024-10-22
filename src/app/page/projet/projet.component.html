@@ -1,0 +1,132 @@
+<div class="container">
+  <div class="ribbon"> Projet <i class="fa-solid fa-code wow rotate" data-wow-duration="1s"> </i></div>
+
+  <div class="row boucle-card">
+    <app-cardprojet
+      [isShowModal]="activeModalIndex === 0"
+      (modalOpened)="showModal(0)"
+      (modalClosed)="closeModal()"
+      title1="Gestion" title2="Resource humaine"
+      technologie="PHP (CodeIgniter)"
+      bdd="Mysql"
+      lien="https://github.com/MaheninaRan/Projet-Gestion-S5.git"
+      description="Une application dédiée pour les responsables RH"
+      detail="Projet de gestion des ressources humaines : ce système permet de gérer plusieurs annonces de recrutement et
+      inclut un formulaire pour la soumission des CV.Le système analyse automatiquement les CV soumis, les trie du
+      meilleur au moins bon. Ensuite, le système contacte les candidats ayant passé la première sélection et leur propose
+      des tests à choix multiples (QCM). Une nouvelle sélection est alors effectuée pour identifier les cinq meilleurs candidats
+      pour le poste. Ces candidats sont ensuite invités à un entretien de soutenance."
+    ></app-cardprojet>
+
+    <app-cardprojet
+      [isShowModal]="activeModalIndex === 1"
+      (modalOpened)="showModal(1)"
+      (modalClosed)="closeModal()"
+      title1="Course" title2="Classement vainqueur"
+      technologie="Java (Spring)"
+      bdd="Postgres"
+      lien="https://github.com/MaheninaRan/gestion-course.git"
+      description="Un systeme de gestion de course avec plusieur critére"
+      detail="Un système de gestion des courses à pied, comprenant
+      différentes étapes et catégories pour les coureurs. La
+      course se déroule par équipes, et plusieurs données sont
+      enregistrées pour chaque étape et chaque équipe .Le
+      système enregistre l'arrivée de chaque coureur, calcule le
+      temps, attribue les points, et génère les classements. Les
+      listes des vainqueurs sont produites par catégorie, par
+      étape et au classement général"
+    ></app-cardprojet>
+
+    <app-cardprojet
+    [isShowModal]="activeModalIndex === 2"
+    (modalOpened)="showModal(2)"
+    (modalClosed)="closeModal()"
+    title1="Dentiste" title2="Réparation dent"
+    technologie="Java (Servlet POO)"
+    bdd="Postgres"
+    lien="https://github.com/MaheninaRan/projet-dentiste.git"
+    description="Un IA pour réparation dent, suggestion"
+    detail="Un projet pour un dentiste : le système enregistre le niveau
+    de dommage subi par les dents du patient. Ensuite, le
+    patient peut choisir entre deux types de réparation
+    (esthétique ou santé). Le système génère alors un devis
+    pour les réparations en fonction des priorités du patient."
+  ></app-cardprojet>
+
+  <app-cardprojet
+    [isShowModal]="activeModalIndex === 3"
+    (modalOpened)="showModal(3)"
+    (modalClosed)="closeModal()"
+    title1="Operation" title2="Tsakitsaky"
+    technologie="PHP (CodeIgniter POO)"
+    bdd="Mysql"
+    lien="https://github.com/MaheninaRan/Tsakitsaky.git"
+    description="Un projet pour gérer la vente de petits produits (paquets)"
+    detail="Il s'agit d'un projet destiné à gérer les opérations de vente de gâteaux ou de cakes réalisés par des étudiants. Nous fournissons des paquets aux étudiants, qui les vendent ensuite, et nous enregistrons
+    chaque vente par étudiant et par paquet. <br/>
+    Nous gérons également le stock des paquets. Le système permet la création d'un paquet en choisissant les ingrédients, chaque paquet ayant un prix approprié qui dépend du produit contenu. Un surplus est ajouté pour garantir un bénéfice. Les paiements
+    peuvent être effectués en plusieurs tranches.<br/>
+    À la fin, nous pouvons consulter le mouvement des stocks, les montants déjà validés et les sommes restantes à payer par chaque étudiant."
+  ></app-cardprojet>
+
+  <app-cardprojet
+    [isShowModal]="activeModalIndex === 4"
+    (modalOpened)="showModal(4)"
+    (modalClosed)="closeModal()"
+    title1="Panneau" title2="Solaire"
+    technologie="Java (Servlet POO)"
+    bdd="Postgres"
+    lien="https://github.com/MaheninaRan/panneau-solaire.git"
+    description="Prévention des coupures de courant à une date et heure précises"
+    detail="Ce projet vise à prévenir les coupures de courant en enregistrant au préalable les données relatives à la puissance des batteries, des panneaux solaires, ainsi que la production d'énergie des panneaux en fonction des conditions météorologiques. <br/>
+    Nous disposons de salles qui consomment de l'électricité, auxquelles nous fournissons une source d'énergie (panneau solaire et batterie). Nous enregistrons également le nombre de personnes présentes dans chaque salle. <br/>
+    Ensuite, le système collecte quotidiennement des données sur les coupures de courant dans chaque salle, le cas échéant. <br/>
+    À la fin, lorsque nous saisissons une date, le système informe que le courant sera coupé dans la salle n°... à ... heure. Cela nous permet de gérer l'utilisation de l'électricité dans ce contexte."
+  ></app-cardprojet>
+
+  <app-cardprojet
+  [isShowModal]="activeModalIndex === 5"
+  (modalOpened)="showModal(5)"
+  (modalClosed)="closeModal()"
+  title1="Approvisionnement" title2="Intelligents"
+  technologie="PHP (CodeIgniter)"
+  bdd="Mysql"
+  lien="https://github.com/MaheninaRan/aprv-commerce.git"
+  description="Outil de demande de besoin et d'achat de Fournitures"
+  detail="Ce système est conçu pour une entreprise qui gère les besoins de chaque département. Chaque département peut soumettre une demande en précisant la date de besoin, et un responsable valide ou refuse cette demande. <br/>
+  Lorsque la demande est validée, le responsable demande des devis (proformas) auprès de plusieurs fournisseurs. Le système sélectionne automatiquement le prix le plus bas pour chaque produit commandé. Par exemple, pour une commande de 10 stylos et 30 cahiers, le système indiquera qu'il faut acheter les stylos chez le fournisseur 1 et les cahiers chez le fournisseur 2. <br/>
+  Après avoir obtenu les proformas, le responsable financier valide l'achat, envoie la commande au fournisseur, et attend la livraison."
+  ></app-cardprojet>
+
+  <app-cardprojet
+  [isShowModal]="activeModalIndex === 6"
+  (modalOpened)="showModal(6)"
+  (modalClosed)="closeModal()"
+  title1="Immobilisation" title2="Matériels"
+  technologie="PHP (CodeIgniter)"
+  bdd="Mysql"
+  lien="https://github.com/MaheninaRan/prj-immobilisation.git"
+  description="Application de Suivi des Biens Mobiles en Entreprise"
+  detail="Cette application permet au responsable de suivre l'emplacement des matériels mobiles de l'entreprise, tels que des ordinateurs, des voitures, et d'autres équipements. Elle permet également aux employés de faire une demande d'utilisation d'un matériel en précisant la date et l'heure de prêt ainsi que celle de retour. <br/>
+  Le responsable des immobilisations peut consulter les détails et l'état de chaque matériel, ainsi que l'historique de son utilisation. Il peut alors répondre à l'employé en indiquant si le matériel est déjà utilisé à la date demandée ou en validant la demande pour que l'employé puisse l'utiliser."
+  ></app-cardprojet>
+
+  <app-cardprojet
+  [isShowModal]="activeModalIndex === 7"
+  (modalOpened)="showModal(7)"
+  (modalClosed)="closeModal()"
+  title1="Front-End" title2="Admin"
+  technologie="React"
+  bdd="Mysql"
+  lien="https/github/exemple/lien"
+  description="Application Front-end Admin pour la Vente en Ligne"
+  detail="Cette application comprend un système de connexion pour l'authentification de l'administrateur. Elle permet à l'admin de consulter les détails du stock, d'effectuer des recherches et des tris. <br/>
+  L'application permet également de gérer les produits et les matières premières grâce à des fonctionnalités de CRUD (Créer/Lire/Mettre à jour/Supprimer). De plus, l'admin peut accéder à un tableau de bord affichant les statistiques des produits vendus, accompagnées de représentations graphiques."
+  ></app-cardprojet>
+
+
+
+
+  </div>
+</div>
+

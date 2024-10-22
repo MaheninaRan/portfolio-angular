@@ -1,0 +1,152 @@
+p{
+  font-size: 16px;
+  color: #444;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.titre{
+  background-color: blue;
+  color: white;
+  width: 15%;
+  font-size: 25px;
+  font-family: cursive;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 10% 10% 100% 0%;
+}
+.divleft, .divcenter, .divright{
+  text-align: left;
+  border-right: thick double #c5eeff;
+}
+.divleft span, .divcenter span, .divright span{
+  border-bottom: 2px double blue;
+  display: inline-block;
+  font-size: 30px;
+}
+.divleft h4{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+.divleft p{
+  width: 95%;
+}
+.divright ul li{
+  font-size: 16px;
+  color: #444;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact{
+  width: 50%;
+  margin: auto;
+}
+.contact ul{
+  display: flex;
+  list-style-type: none;
+}
+
+.contact ul li:first-child{
+  margin-left: -20px;
+}
+.contact ul li{
+  margin: auto;
+  font-size: 24px;
+  color: blue;
+  cursor: pointer;
+}
+.contact ul li:hover{
+  color: rgb(104, 170, 255);
+}
+.dowload_cv button{
+  border-color: blue;
+  color: blue;
+  border-radius: 10px 10px 10px 10px;
+}
+.dowload_cv button:hover{
+  background-color: white;
+}
+.profil{
+  position: relative;
+  font-size: 30px;
+}
+.h_separator{
+  position: absolute;
+  width: 54px;
+  top: 40px;
+  height: 4px;
+  background-color: #32a1ce;
+}
+@media(max-width:991px){
+  .divleft, .divcenter, .divright{
+    text-align: left;
+    border-right: none;
+    border-bottom: thick double #c5eeff;
+    padding: 10px;
+  }
+}
+
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.ribbon i{
+  margin-left: 10px;
+}
+.ribbon {
+  --r: .8em;
+  border-block: .5em solid #0000;
+  padding-inline: calc(var(--r) + .25em) .5em;
+  line-height: 1.8;
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 calc(100% - .25em),var(--r) 50%,0 .25em);
+  background:
+  radial-gradient(.2em 50% at right,#000a,#0000) border-box,
+  #2699dc padding-box;
+  width: fit-content;
+}
+@media(max-width:595px){
+  .ribbon {
+    width: 100%;
+  }
+}
+.writing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  display: inline-block;
+  animation: rotate 1s linear;
+}
+
+.wow.rotate {
+  visibility: hidden;
+}
+
+.wow.rotate[data-wow-duration] {
+  visibility: visible;
+}
+
+
+

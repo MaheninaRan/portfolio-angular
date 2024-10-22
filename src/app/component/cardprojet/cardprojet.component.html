@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row div-title">
+    <ng-container *ngIf="!isShowModal; else modalTemplate">
+      <h1>{{title1}} <br> {{title2}} <br></h1>
+      <div class="div_hr"></div>
+      <div class="div-body">
+        <p>
+          <b>Déscription : </b> {{description}} <br>
+          <b>Téchnologie : </b> {{technologie}} <br>
+          <b>Bdd : </b> {{bdd}} <br>
+          <b>Git : </b> <a href="{{lien}}" target="_blank">{{lien}}</a>
+        </p>
+      </div>
+      <div class="div-button">
+        <button id="button-detail" (click)="show_modal()">Voir détail</button>
+      </div>
+    </ng-container>
+
+    <ng-template #modalTemplate>
+      <div class="detail">
+            <button (click)="close_modal()">X</button>
+        <div class="row div-body-detail">
+          <p [innerHTML]="detail"></p>
+        </div>
+      </div>
+    </ng-template>
+
+  </div>
+</div>

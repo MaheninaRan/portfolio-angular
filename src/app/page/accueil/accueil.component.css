@@ -1,0 +1,76 @@
+.container-fluid {
+  position: relative;
+  background-image: url("/assets/image/bg_image_1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-attachment: fixed;
+
+}
+
+.container-fluid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.container-fluid h3,
+.container-fluid h1,
+.container-fluid h4,button{
+  position: relative;
+  z-index: 2;
+}
+
+.info{
+  padding: 40px;
+}
+
+.container-fluid h3{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.container-fluid h1{
+  font-weight: bold;
+  font-size: 100px;
+}
+.container-fluid h4{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+letter-spacing: 2px;
+}
+
+button{
+  border-radius: 20px;
+  padding: 10px;
+}
+@media(max-width : 595px){
+  .container-fluid h3{
+    font-size: 40px;
+  }
+  .container-fluid h1{
+    font-size: 75px;
+    text-align: center;
+  }
+}
+
+
+@media(max-width : 420px){
+  .container-fluid h3{
+    font-size: 32px;
+  }
+  .container-fluid h1{
+    font-size: 60px;
+    text-align: center;
+  }
+}
+
+

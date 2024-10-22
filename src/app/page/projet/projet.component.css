@@ -1,0 +1,102 @@
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon i{
+  margin-left: 10px;
+}
+.ribbon {
+  --r: .8em;
+  border-block: .5em solid #0000;
+  padding-inline: calc(var(--r) + .25em) .5em;
+  line-height: 1.8;
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 calc(100% - .25em),var(--r) 50%,0 .25em);
+  background:
+  radial-gradient(.2em 50% at right,#000a,#0000) border-box,
+  #2699dc padding-box;
+  width: fit-content;
+}
+
+@media(max-width:595px){
+  .ribbon {
+    width: 100%;
+  }
+}
+
+.boucle-card{
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 10px;
+}
+
+@media(max-width:1140px){
+  .boucle-card{
+    grid-template-columns: repeat(3, 335px);
+  }
+}
+
+@media(max-width:1106px){
+  .boucle-card{
+    grid-template-columns: repeat(2, 500px);
+  }
+}
+
+@media(max-width:1077px){
+  .boucle-card{
+    grid-template-columns: repeat(2, 480px);
+  }
+}
+
+@media(max-width:996px){
+  .boucle-card{
+    grid-template-columns: repeat(2, 470px);
+  }
+}
+
+@media(max-width:991px){
+  .boucle-card{
+    grid-template-columns: repeat(2, 400px);
+  }
+}
+
+@media(max-width:915px){
+  .boucle-card{
+    grid-template-columns: repeat(2, 370px);
+  }
+}
+
+@media(max-width:797px){
+  .boucle-card{
+    grid-template-columns: repeat(2, 340px);
+  }
+}
+
+@media(max-width:768px){
+  .boucle-card{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  display: inline-block;
+  animation: rotate 1s linear;
+}
+
+.wow.rotate {
+  visibility: hidden;
+}
+
+.wow.rotate[data-wow-duration] {
+  visibility: visible;
+}

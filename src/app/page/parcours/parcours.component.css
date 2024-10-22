@@ -1,0 +1,95 @@
+
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.ribbon i{
+  margin-left: 10px;
+}
+.ribbon {
+  --r: .8em;
+  border-block: .5em solid #0000;
+  padding-inline: calc(var(--r) + .25em) .5em;
+  line-height: 1.8;
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 calc(100% - .25em),var(--r) 50%,0 .25em);
+  background:
+  radial-gradient(.2em 50% at right,#000a,#0000) border-box,
+  #2699dc padding-box;
+  width: fit-content;
+}
+@media(max-width:595px){
+  .ribbon {
+    width: 100%;
+  }
+}
+.education{
+  margin-left: 10%;
+}
+#description{
+  font-size: 16px;
+  margin-left: 5%;
+  font-weight: normal;
+  color: #444;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.education ul li{
+  list-style-type: none;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  display: inline-block;
+  animation: rotate 1s linear;
+}
+
+.wow.rotate {
+  visibility: hidden;
+}
+
+.wow.rotate[data-wow-duration] {
+  visibility: visible;
+}
+
+.liste1-wow{
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 0.5s forwards;
+  margin: 10px 0;
+}
+
+.liste2-wow{
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 1s forwards;
+  margin: 10px 0;
+}
+
+.liste3-wow{
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 1.5s forwards;
+  margin: 10px 0;
+}
+
+.liste4-wow{
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 2s forwards;
+  margin: 10px 0;
+}
+
+
