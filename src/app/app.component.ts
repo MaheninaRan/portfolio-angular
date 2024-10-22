@@ -18,7 +18,7 @@ declare var WOW: any;
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'teste-angular';
+  title = 'portfolio-angular';
   ngAfterViewInit() {
     const wow = new WOW();
     wow.init();
