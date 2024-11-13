@@ -11,7 +11,7 @@ export class AccueilComponent {
   downloadCV() {
     const link = document.createElement('a');
     link.href = 'assets/CvRadoMaheninaEmbauche.pdf';
-    link.download = 'Rado_Mahenina_cv.pdf'; //
+    link.download = 'Rado_Mahenina_cv.pdf';
     link.click();
   }
 }
