@@ -57,12 +57,16 @@ p{
 .contact ul li:hover{
   color: rgb(104, 170, 255);
 }
-.dowload_cv button{
-  border-color: blue;
+.dowload_cv .btn-cv{
+  display: inline-block;
+  padding: 1px 6px;
+  border: 2px solid blue;
   color: blue;
-  border-radius: 10px 10px 10px 10px;
+  background-color: #efefef;
+  border-radius: 10px;
+  text-decoration: none;
 }
-.dowload_cv button:hover{
+.dowload_cv .btn-cv:hover{
   background-color: white;
 }
 .profil{

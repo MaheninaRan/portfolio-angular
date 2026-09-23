@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from "./component/menu/menu.component";
 import { AccueilComponent } from "./page/accueil/accueil.component";
 import { ProfilComponent } from "./page/profil/profil.component";
@@ -15,7 +14,7 @@ declare var WOW: any;
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MenuComponent, AccueilComponent, ProfilComponent, ParcoursComponent, CompetenceComponent, ProjetComponent, ContactComponent],
+  imports: [CommonModule, MenuComponent, AccueilComponent, ProfilComponent, ParcoursComponent, CompetenceComponent, ProjetComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

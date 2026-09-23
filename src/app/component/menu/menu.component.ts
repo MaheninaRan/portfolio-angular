@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css'] // Change 'styleUrl' to 'styleUrls'
+  styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
   @Input() name: string = '';
@@ -16,9 +15,6 @@ export class MenuComponent {
   isSticky: boolean = false;
   isDropdownVisible = false;
 
-
-  constructor(private route: Router) {}
-
   setActive(section: string) {
     this.activeSection = section;
     this.isDropdownVisible = false;
@@ -26,10 +22,6 @@ export class MenuComponent {
 
   toggleDropdown() {
     this.isDropdownVisible = !this.isDropdownVisible;
-  }
-  lien(): void {
-    console.log("TENA MILAY");
-    this.route.navigate(['/mahenina']);
   }
 
   @HostListener('window:scroll', ['$event'])

@@ -5,10 +5,12 @@
       <div class="div_hr"></div>
       <div class="div-body">
         <p>
-          <b>Déscription : </b> {{description}} <br>
-          <b>Téchnologie : </b> {{technologie}} <br>
-          <b>Bdd : </b> {{bdd}} <br>
-          <b>Git : </b> <a href="{{lien}}" target="_blank">{{lien}}</a>
+          <b>Description : </b> {{description}} <br>
+          <b>Technologie : </b> {{technologie}} <br>
+          <b>Bdd : </b> {{bdd}}
+          <ng-container *ngIf="lien">
+            <br><b>Git : </b> <a [href]="lien" target="_blank" rel="noopener noreferrer">{{lien}}</a>
+          </ng-container>
         </p>
       </div>
       <div class="div-button">
