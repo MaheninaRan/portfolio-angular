@@ -1,5 +1,5 @@
-import { Component,OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from "./component/menu/menu.component";
 import { AccueilComponent } from "./page/accueil/accueil.component";
@@ -8,6 +8,8 @@ import { ParcoursComponent } from "./page/parcours/parcours.component";
 import { CompetenceComponent } from "./page/competence/competence.component";
 import { ProjetComponent } from "./page/projet/projet.component";
 import { ContactComponent } from "./page/contact/contact.component";
+
+// Chargé globalement via "scripts" dans angular.json
 declare var WOW: any;
 
 @Component({
@@ -17,11 +19,15 @@ declare var WOW: any;
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'portfolio-angular';
-  ngAfterViewInit() {
-    const wow = new WOW();
-    wow.init();
-  }
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngAfterViewInit(): void {
+    // WOW manipule le DOM : uniquement côté navigateur (pas pendant le SSR / prérendu)
+    if (isPlatformBrowser(this.platformId) && typeof WOW !== 'undefined') {
+      new WOW().init();
+    }
+  }
 }

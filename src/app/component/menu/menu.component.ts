@@ -34,17 +34,21 @@ export class MenuComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
-    const menuSticky = document.querySelector('.menu-sticky') as HTMLElement;
-    const menuOffset = menuSticky.offsetTop;
-
-    if (window.scrollY >= (menuOffset - 72)) {
-      this.isSticky = true;
-    } else {
-      this.isSticky = false;
+    const menuSticky = document.querySelector('.menu-sticky') as HTMLElement | null;
+    if (menuSticky) {
+      this.isSticky = window.scrollY >= (menuSticky.offsetTop - 72);
     }
 
-    const sections = ['accueilID', 'profilID', 'parcoursID', 'competenceID','projetID, contactID'];
-    const scrollPosition = window.scrollY;
+    const sections = ['accueilID', 'profilID', 'parcoursID', 'competenceID', 'projetID', 'contactID'];
+    // Décalage pour tenir compte de la hauteur du menu sticky
+    const scrollPosition = window.scrollY + 80;
+
+    // En bas de page, la dernière section est trop courte pour atteindre le haut de l'écran
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    if (atBottom) {
+      this.activeSection = sections[sections.length - 1];
+      return;
+    }
 
     sections.forEach(section => {
       const element = document.getElementById(section);
